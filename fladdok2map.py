@@ -24,10 +24,6 @@ def resultats():
     else:
         return redirect(url_for('apropos'))
 
-@app.route('/test')
-def test():
-    return redirect(url_for('apropos'))
-
 if __name__ == '__main__':
     app.debug = False
     app.run()
