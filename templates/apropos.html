@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block body %}
+<h2>A propos</h2>
+La recherche sur la carte d'openstreetmap.org utilise nominatim et
+pour la France, la base de données est beaucoup moins conséquente que
+celle de
+la <a href="https://wiki.openstreetmap.org/wiki/WikiProject_France/WikiProject_Base_Adresses_Nationale_Ouverte_%28BANO%29">BAN</a>. Cette
+petite application fait donc le lien entre la BAN et la carte
+d'openstreetmap. Vous lui donnez une adresse, elle vous donne une
+carte pour chaque adresse trouvée, le tout classé par pertinence :)
+<p>
+Cette application <a href="http://flask.pocoo.org/">flask</a> a été
+développé par <a href="https://chown.me">Daniel Jakots</a>.
+<p>
+Le code est disponible sur <a href=https://github.com/danieljakots/fladdok2map>github</a>.
+{% endblock %}

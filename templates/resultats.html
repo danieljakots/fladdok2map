@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block body %}
+  <ul class="entries">
+  {% for entry in entries %}
+   {% for key, value in entry.items() %}
+      <a href="{{value}}">Adresse : {{key}}</a><br />
+   {% endfor %}
+{% endfor %}
+  </ul>
+{% endblock %}
