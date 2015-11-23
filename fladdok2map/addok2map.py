@@ -42,4 +42,3 @@ def lookup(address):
             address_book.append({text: url})
 
         return address_book
-

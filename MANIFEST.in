@@ -1,0 +1,2 @@
+recursive-include fladdok2map/static *
+recursive-include fladdok2map/templates *

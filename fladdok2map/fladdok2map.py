@@ -3,7 +3,7 @@
 from flask import Flask, render_template, request, redirect, url_for
 import requests
 import json
-import addok2map
+from fladdok2map import addok2map
 
 app = Flask(__name__)
 
@@ -24,6 +24,11 @@ def resultats():
     else:
         return redirect(url_for('apropos'))
 
-if __name__ == '__main__':
+
+def main():
     app.debug = False
     app.run()
+
+
+if __name__ == '__main__':
+    main()
