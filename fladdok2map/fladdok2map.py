@@ -16,7 +16,7 @@
 #
 
 from flask import Flask, render_template, request, redirect, url_for
-import addok2map
+from fladdok2map import addok2map
 
 app = Flask(__name__)
 
