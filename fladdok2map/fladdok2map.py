@@ -1,7 +1,7 @@
 #!/usr/bin/env python3.4
 
 from flask import Flask, render_template, request, redirect, url_for
-from fladdok2map import addok2map
+import addok2map
 
 app = Flask(__name__)
 
