@@ -10,7 +10,7 @@ setup(
     include_package_data=True,
     packages = find_packages(),
     entry_points ={
-        'console_scripts': ['fladdok2map = fladdok2map.fladdok2map:main'],
+        'console_scripts': ['app = fladdok2map.app:main'],
     },
     zip_safe=False,
 )

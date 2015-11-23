@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 {% block body %}
   <h2>Recherche d'adresse</h2>
-  <form action="{{ url_for('resultats') }}" method="post">
+  <form action="{{ url_for('fladdok2map.resultats') }}" method="post">
     <dl>
       <dt>Adresse :
       <dd><input type="text" name="address">

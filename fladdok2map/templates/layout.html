@@ -4,8 +4,8 @@
 <div class="page">
   <h1>Recherche d'adresses via addok</h1>
   <div class="metanav">
-    <a href="{{ url_for('recherche') }}">Rechercher une adresse</a>
-    <a href="{{ url_for('apropos') }}">À propos ?</a>
+    <a href="{{ url_for('fladdok2map.recherche') }}">Rechercher une adresse</a>
+    <a href="{{ url_for('fladdok2map.apropos') }}">À propos ?</a>
   </div>
   {% for message in get_flashed_messages() %}
     <div class="flash">{{ message }}</div>

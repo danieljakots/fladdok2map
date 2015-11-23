@@ -1,32 +1,26 @@
 #!/usr/bin/env python3.4
 
-from flask import Flask, render_template, request, redirect, url_for
+from flask import render_template, request, redirect, url_for, Blueprint
 from fladdok2map import addok2map
+#import addok2map
 
-app = Flask(__name__)
+fladdok2map = Blueprint('fladdok2map', __name__, url_prefix='/addok2map',
+                        template_folder='templates')
 
-@app.route('/apropos')
+@fladdok2map.route('/apropos')
 def apropos():
     return render_template('apropos.html')
 
-@app.route('/')
+@fladdok2map.route('/')
 def recherche():
     return render_template('recherche.html')
 
-@app.route('/resultats', methods=['GET', 'POST'])
+@fladdok2map.route('/resultats', methods=['GET', 'POST'])
 def resultats():
     if request.method == 'POST':
         results = addok2map.lookup(request.form['address'])
         return render_template('resultats.html', entries=results)
 
     else:
-        return redirect(url_for('apropos'))
+        return redirect(url_for('fladdok2map.apropos'))
 
-
-def main():
-    app.debug = False
-    app.run()
-
-
-if __name__ == '__main__':
-    main()
