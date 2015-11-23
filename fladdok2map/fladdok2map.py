@@ -1,8 +1,7 @@
 #!/usr/bin/env python3.4
 
 from flask import render_template, request, redirect, url_for, Blueprint
-from fladdok2map import addok2map
-#import addok2map
+import addok2map
 
 fladdok2map = Blueprint('fladdok2map', __name__, url_prefix='/addok2map',
                         template_folder='templates')

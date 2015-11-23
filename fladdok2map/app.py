@@ -2,7 +2,6 @@
 
 from flask import Flask
 from fladdok2map import fladdok2map
-#import fladdok2map
 
 def create_app():
     app = Flask(__name__)
