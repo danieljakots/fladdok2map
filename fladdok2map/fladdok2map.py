@@ -31,8 +31,11 @@ def recherche():
 @application.route('/resultats', methods=['GET', 'POST'])
 def resultats():
     if request.method == 'POST':
-        results = addok2map.lookup(request.form['address'])
-        return render_template('resultats.html', entries=results)
+        if request.form['address']:
+            results = addok2map.lookup(request.form['address'])
+            return render_template('resultats.html', entries=results)
+        else:
+            return redirect("https://geo.chown.me/")
 
     else:
         return redirect(url_for('apropos'))
