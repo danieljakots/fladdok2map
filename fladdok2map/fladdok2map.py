@@ -35,10 +35,10 @@ def resultats():
             results = addok2map.lookup(request.form['address'])
             return render_template('resultats.html', entries=results)
         else:
-            return redirect("https://geo.chown.me/")
+            return redirect(request.url_root)
 
     else:
-        return redirect("https://geo.chown.me/")
+        return redirect(request.url_root)
 
 
 def main():
