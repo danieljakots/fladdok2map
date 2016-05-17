@@ -38,7 +38,7 @@ def resultats():
             return redirect("https://geo.chown.me/")
 
     else:
-        return redirect(url_for('apropos'))
+        return redirect("https://geo.chown.me/")
 
 
 def main():
